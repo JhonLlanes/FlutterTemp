@@ -1,0 +1,73 @@
+void main (){
+  
+  final String nombre = 'hola';
+  const String apellido = 'mundo';
+  
+  print(' $nombre $apellido '); 
+  
+  
+  // para numeros
+  int empleados = 10;
+  double salario = 10.00;
+  
+  print (empleados);
+  print (salario);
+}
+
+
+//////////metodos
+
+void main (){
+  
+  final String nombre = 'JOHN';
+ 
+  saludar(nombre, 'ESCRIBIENDO');
+  saludar2(mensaje: 'HI',nombre: 'JOHN');
+}
+
+saludar(String nombre, [String mensaje = 'HI']){
+  print ( ' $nombre  $mensaje');
+  
+}
+
+saludar2({ required String nombre , required String mensaje}){
+  print (' $nombre $mensaje ');
+  
+}
+
+////////////////////////
+
+
+paso de parametros clases
+void main (){
+  
+
+  final woverine = new Heroe(nombre: 'John ', poder: 'Llanes');
+//   woverine.nombre = 'Logan';
+//   woverine.poder = 'Regeneracion';
+  
+  print (woverine);
+  
+}
+
+
+class Heroe {
+  String? nombre;
+  String? poder;
+  
+  
+  Heroe({required this.nombre , required this.poder});
+  
+   @override
+  String toString(){
+    return 'nombre: ${this.nombre}';
+  }
+  
+  
+}
+
+-------------------------------------------------------
+
+
+
+
