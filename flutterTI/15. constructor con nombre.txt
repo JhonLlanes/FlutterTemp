@@ -1,0 +1,36 @@
+void main (){
+  
+  final rawJson = {
+    'nombre':'Tony',
+    'poder':'dinero'
+    
+  };
+  
+
+//   final iroman = new Heroe(nombre: 'John ', poder: 'Llanes');  
+  final iroman = Heroe.fromJson(rawJson);
+  print (iroman);
+  
+}
+
+
+class Heroe {
+  String nombre;
+  String poder;
+  
+  
+  Heroe({required this.nombre , required this.poder});
+  
+  // para envio de json 
+  Heroe.fromJson(Map<String, String> json):
+    this.nombre = json['nombre']!,
+     this.poder = json['poder'] ?? 'no tiene poder';
+  
+  
+   @override
+  String toString(){
+    return 'nombre: ${this.nombre}, poder: ${this.poder}';
+  }
+  
+  
+}
